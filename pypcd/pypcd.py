@@ -195,6 +195,12 @@ def _build_dtype(metadata):
                           metadata['type'],
                           metadata['size']):
         np_type = pcd_type_to_numpy_type[(t, s)]
+        
+        additional_char = 'a'
+        if f == '_':
+            f = f + additional_char
+            additional_char = 'b'
+        
         if c == 1:
             fieldnames.append(f)
             typenames.append(np_type)

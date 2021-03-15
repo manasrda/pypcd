@@ -1,7 +1,6 @@
-``pypcd``
-=======
 
-note: this comment helped me get a running version on python3 (https://github.com/dimatura/pypcd/issues/7#issuecomment-596867258).  
+note:   
+This comment helped me get a running version on python3 (https://github.com/dimatura/pypcd/issues/7#issuecomment-596867258).  
 If you are using velodyne lidar and facing error ( valueerror: field '__0000' occurs more than once ), you can use this fork instead.
 I justed added a small (unreliable) fix for the issue.  
 use:   
@@ -9,6 +8,9 @@ pip3 install --upgrade git+https://github.com/manasrda/pypcd.git
 then:   
 from pypcd import pypcd  
 points_pcd = pypcd.PointCloud.from_path(lidar_path).pc_data  
+
+``pypcd``
+=======
 
 What?
 ----

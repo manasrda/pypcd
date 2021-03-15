@@ -190,13 +190,13 @@ def _build_dtype(metadata):
     """
     fieldnames = []
     typenames = []
+    additional_char = 'a'
     for f, c, t, s in zip(metadata['fields'],
                           metadata['count'],
                           metadata['type'],
                           metadata['size']):
         np_type = pcd_type_to_numpy_type[(t, s)]
         
-        additional_char = 'a'
         if f == '_':
             f = f + additional_char
             additional_char = 'b'
